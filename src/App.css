@@ -1,0 +1,25 @@
+.HeaderWrapper {
+  background-color: white;
+  color: black;
+  padding: 10px;
+
+}
+
+.TattooList {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: -1;
+}
+
+main {
+ display: grid;
+  grid-template-columns: .5fr 2fr 2fr;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.ImageWrapper img {
+  width: 100%;
+}
