@@ -3,6 +3,7 @@ import { TattooList } from './components/TattooList'
 import './App.css'
 import { Header } from './components/Header'
 import { SideBar } from './components/SideBar'
+import { Footer } from './components/Footer'
 
 function App() {
   const [category, setCategory] = useState('')
@@ -21,10 +22,13 @@ function App() {
         <div className='SideBar'>
         <SideBar setCategory={setCategory}/>
         </div>
-        <div className='TattooList'>
-          <TattooList data={data} />
-        </div>
+          <div className='TattooList'>
+            <TattooList data={data} />
+          </div>
       </main>
+      <div className='Footer'>
+        <Footer />
+      </div>
     </>
   )
 }

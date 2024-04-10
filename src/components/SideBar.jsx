@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
+import PropTypes from 'prop-types';
 
 export function SideBar({setCategory}) {
   const [selectedCategory, setSelectedCategory] = useState('')
@@ -8,16 +9,27 @@ export function SideBar({setCategory}) {
     .then(res => res.json())
     .then(data => setCategories(data))
   }, [])
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category)
+    setCategory(category)
+  }
   
   return (
     <>
+    <p onClick={() => handleCategoryClick('')} className={selectedCategory === '' ? 'selected_category': ''}>Todos</p>
     {categories && (
       categories.map((item, index) => {
         return(
-        <p key={index}>{item.name}</p>
+        <p key={index} onClick={() => handleCategoryClick(item.name)} className={selectedCategory === item.name ? 'selected_category': ''}>{item.name}</p>
         )  
       })
     )}
     </>
   )
+}
+
+
+SideBar.propTypes = {
+  setCategory: PropTypes.func.isRequired
 }

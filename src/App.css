@@ -1,25 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
 .HeaderWrapper {
   background-color: white;
   color: black;
-  padding: 10px;
-
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
 }
+
 
 .TattooList {
   display: flex;
+  flex-flow: wrap;
   grid-column-start: 2;
   grid-column-end: -1;
+  justify-content: start;
+  text-align: center;
+  gap: 20px;
+  padding: 30px 10px;
+  width: 100%;
 }
 
 main {
- display: grid;
-  grid-template-columns: .5fr 2fr 2fr;
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
   grid-template-rows: 1fr;
   grid-auto-rows: 1fr;
-  gap: 0px 0px;
+  align-items: start;
+  gap: 10px 30px;
   grid-auto-flow: row;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  min-height: 100vh;
 }
 
 .ImageWrapper img {
   width: 100%;
 }
+
+.CardWrapper {
+  flex-basis: 300px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+
+.SideBar {
+  padding: 30px 5px;
+  height: 100%;
+}
+
+.SideBar p {
+  position: relative;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color .2s linear;
+}
+
+.SideBar p::before {
+  content: ''; /* Agregar contenido al pseudo-elemento */
+  position: absolute; /* Establecer posición absoluta con respecto al elemento padre */
+  bottom: 0; /* Colocar el pseudo-elemento en la parte inferior del elemento padre */
+  left: 0; /* Colocar el pseudo-elemento en la parte izquierda del elemento padre */
+  width: 0; /* Ancho inicial del pseudo-elemento */
+  height: 2px; /* Altura del subrayado */
+  background-color: white; /* Color del subrayado */
+  transition: width 0.3s ease; /* Agregar transición al ancho */
+}
+
+.selected_category::after {
+  content: ''; /* Agregar contenido al pseudo-elemento */
+  position: absolute; /* Establecer posición absoluta con respecto al elemento padre */
+  bottom: 0; /* Colocar el pseudo-elemento en la parte inferior del elemento padre */
+  left: 0; /* Colocar el pseudo-elemento en la parte izquierda del elemento padre */
+  width: 90%; /* Ancho inicial del pseudo-elemento */
+  height: 2px; /* Altura del subrayado */
+  background-color: white; /* Color del subrayado */
+}
+
+.SideBar p:hover::before {
+  width: 90%; /* Expandir el subrayado al hacer hover */
+}
+
+.Footer {
+  background-color: white;
+  color: black;
+  padding: 25px;
+  margin-top: 5rem;
+  text-align: center;
+  bottom: 0;
+}
+
