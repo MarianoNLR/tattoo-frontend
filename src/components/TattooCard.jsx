@@ -1,7 +1,8 @@
 //import React from 'react'
 import PropTypes from 'prop-types';
+import './styles/tattooCard.css'
 
-export function TattooCard ({name, image, category}) {
+export default function TattooCard ({name, image, category}) {
 
   return (
     <div className='CardWrapper'>

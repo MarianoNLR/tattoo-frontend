@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.SideBar {
+  padding: 30px 5px;
+  height: 100%;
+}
+
+.SideBar p {
+  position: relative;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color .2s linear;
+}
+
+.SideBar p::before {
+  content: ''; /* Agregar contenido al pseudo-elemento */
+  position: absolute; /* Establecer posición absoluta con respecto al elemento padre */
+  bottom: 0; /* Colocar el pseudo-elemento en la parte inferior del elemento padre */
+  left: 0; /* Colocar el pseudo-elemento en la parte izquierda del elemento padre */
+  width: 0; /* Ancho inicial del pseudo-elemento */
+  height: 2px; /* Altura del subrayado */
+  background-color: white; /* Color del subrayado */
+  transition: width 0.3s ease; /* Agregar transición al ancho */
+}
+
+
+.selected_category::after {
+  content: ''; /* Agregar contenido al pseudo-elemento */
+  position: absolute; /* Establecer posición absoluta con respecto al elemento padre */
+  bottom: 0; /* Colocar el pseudo-elemento en la parte inferior del elemento padre */
+  left: 0; /* Colocar el pseudo-elemento en la parte izquierda del elemento padre */
+  width: 90%; /* Ancho inicial del pseudo-elemento */
+  height: 2px; /* Altura del subrayado */
+  background-color: white; /* Color del subrayado */
+}
+
+.SideBar p:hover::before {
+  width: 90%; /* Expandir el subrayado al hacer hover */
+}

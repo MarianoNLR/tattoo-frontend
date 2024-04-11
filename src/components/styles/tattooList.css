@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.TattooList {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: start;
+  text-align: center;
+  align-items: start;
+  gap: 20px;
+  padding: 30px 10px;
+}

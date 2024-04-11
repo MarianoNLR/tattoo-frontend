@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.ImageWrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.CardWrapper {
+  flex-basis: 400px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-import {TattooCard} from './TattooCard'
+import TattooCard from './TattooCard'
+import './styles/tattooList.css'
 
-export function TattooList(props) {
+export default function TattooList(props) {
 
   return(
     <>

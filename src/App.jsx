@@ -1,34 +1,19 @@
-import { useState, useEffect } from 'react'
-import { TattooList } from './components/TattooList'
 import './App.css'
-import { Header } from './components/Header'
-import { SideBar } from './components/SideBar'
-import { Footer } from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import Error404 from './pages/Error404.jsx'
+import NewTatto from './pages/NewTattoo.jsx'
+import NewCategory from './pages/NewCategory.jsx'
 
 function App() {
-  const [category, setCategory] = useState('')
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    fetch(`http://localhost:3000/tattoo?category=${category}`)
-    .then(res => res.json())
-    .then(data => setData(data))
-  },[category]) 
-
   return (
     <>
-      <Header />
-      <main>
-        <div className='SideBar'>
-        <SideBar setCategory={setCategory}/>
-        </div>
-          <div className='TattooList'>
-            <TattooList data={data} />
-          </div>
-      </main>
-      <div className='Footer'>
-        <Footer />
-      </div>
+      <Routes>
+        <Route index path="/" element={<Home />}></Route>
+        <Route path="/newTattoo" element={<NewTatto />}></Route>
+        <Route path="/newCategory" element={<NewCategory />}></Route>
+        <Route path="*" element={<Error404 />}></Route>
+      </Routes>
     </>
   )
 }

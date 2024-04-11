@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react'
+import './styles/sideBar.css'
 import PropTypes from 'prop-types';
 
-export function SideBar({setCategory}) {
+export default function SideBar({setCategory}) {
   const [selectedCategory, setSelectedCategory] = useState('')
   const [categories, setCategories] = useState([])
   useEffect(() => {
