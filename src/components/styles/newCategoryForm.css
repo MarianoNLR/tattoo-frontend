@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+.category-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  color: black;
+  border-radius: 5px;
+}
+
+.category-form-wrapper p {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.category-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+.category-form input[type='text'] {
+  padding: 10px;
+}
+
+.category-form button {
+  padding: 8px;
+}

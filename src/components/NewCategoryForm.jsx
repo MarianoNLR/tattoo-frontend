@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './styles/newCategoryForm.css'
 
 export default function NewCategoryForm () {
   const formRef = useRef(null)
@@ -33,14 +34,14 @@ export default function NewCategoryForm () {
 
   return (
     <>
-      <main className="category-main">
-        <div className="category-form-wrapper">
-          <form ref={formRef} className="category-form">
-            <input type="text" name="name" id="name" placeholder="Category's name" />
-            <button type="button" onClick={handleSubmit}>Submit</button>
-          </form>
-        </div>
-      </main>
+      <div className="category-form-wrapper">
+        <p>New Category</p>
+        <form ref={formRef} className="category-form">
+          <input type="text" name="name" id="name" placeholder="Category's name" />
+          <button type="button" onClick={handleSubmit}>Submit</button>
+        </form>
+      </div>
+      
     </>
   )
 }

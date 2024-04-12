@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.category-main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 10rem;
+}
