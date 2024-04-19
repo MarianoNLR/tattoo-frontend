@@ -34,9 +34,9 @@ export default function NewTattooForm () {
 
   return (
     <div className="FormWrapper">
-      <p className='FormTitle'>New Tattoo Form</p>
+      <p className='FormTitle'>Nuevo Tatuaje</p>
       <form ref={formRef} encType="multipart/form-data" className="Form" >
-        <input type="text" placeholder="Tattoo's name" name="name" id="name"></input>
+        <input type="text" placeholder="Nombre del tatuaje" name="name" id="name"></input>
         <select name="category">
           {categories && 
             categories.map((item, index) => {

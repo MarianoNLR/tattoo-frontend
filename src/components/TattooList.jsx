@@ -14,7 +14,7 @@ export default function TattooList(props) {
         )
       })
       :
-      <h2>No se encontraron elementos</h2>
+      <h2>Elementos no encontrados</h2>
       }  
     </>
   )

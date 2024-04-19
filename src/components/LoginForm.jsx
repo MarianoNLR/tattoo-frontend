@@ -58,10 +58,10 @@ export default function LoginForm () {
     <div className="FormWrapper" onSubmit={handleLogin}>
       <p className='FormTitle'>Login</p>
       <form className="Form" >
-        <input type="text" placeholder="Username" name="username" id="username" onChange={(e) => handleUsernameChange(e)}></input>
+        <input type="text" placeholder="Nombre de usuario" name="username" id="username" onChange={(e) => handleUsernameChange(e)}></input>
         
-        <input type="password" placeholder="Password" name="password" id="password" onChange={(e) => handlePasswordChange(e)}/>
-        <button type="submit">Login</button>
+        <input type="password" placeholder="Contraseña" name="password" id="password" onChange={(e) => handlePasswordChange(e)}/>
+        <button type="submit">Acceder</button>
       </form>
 
       <Notification message={errorMessage}></Notification>

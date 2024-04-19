@@ -35,10 +35,10 @@ export default function NewCategoryForm () {
   return (
     <>
       <div className="category-form-wrapper">
-        <p>New Category</p>
+        <p>Nueva Categoria</p>
         <form ref={formRef} className="category-form">
           <input type="text" name="name" id="name" placeholder="Category's name" />
-          <button type="button" onClick={handleSubmit}>Submit</button>
+          <button type="button" onClick={handleSubmit}>Agregar</button>
         </form>
       </div>
       

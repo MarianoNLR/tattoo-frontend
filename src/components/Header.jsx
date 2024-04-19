@@ -4,7 +4,7 @@ export default function Header() {
 
   return (
     <div className="HeaderWrapper">
-      Tattoo Collection
+      Colección de Tatuajes
     </div>
   )
 }
