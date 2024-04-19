@@ -14,7 +14,7 @@ export default function NewTattoo () {
     if (!token) {
       navigate('/login')
     }
-  }, [])
+  }, [navigate])
   return (
     <>
       <Header></Header>

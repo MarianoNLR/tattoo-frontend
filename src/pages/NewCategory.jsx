@@ -11,7 +11,7 @@ export default function NewCategory () {
     const token = localStorage.getItem('loggedTattooApp')
 
     if (!token) navigate('/login')
-  }, [])
+  }, [navigate])
 
   
 
