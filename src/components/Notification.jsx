@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-// eslint-disable-next-line react/prop-types
+
 const Notification = ({ message }) => {
 
   if (message === null) {
@@ -13,8 +13,8 @@ const Notification = ({ message }) => {
   )
 }
 
-Notification.protoTypes = {
-  message: PropTypes.string
+Notification.propTypes = {
+  message: PropTypes.string.isRequired
 }
 
 export default Notification

@@ -8,6 +8,7 @@ export default function LoginForm () {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState(null)
   const [errorMessage, setErrorMessage] = useState('')
 
@@ -49,11 +50,13 @@ export default function LoginForm () {
 
       
     // eslint-disable-next-line no-empty
-    } catch (e) {  }
+    } catch (e) { 
+      setErrorMessage('An error has ocurred. Please, try again later.')
+     }
   }
   return (
     <div className="FormWrapper" onSubmit={handleLogin}>
-      <p className='FormTitle'>New Tattoo Form</p>
+      <p className='FormTitle'>Login</p>
       <form className="Form" >
         <input type="text" placeholder="Username" name="username" id="username" onChange={(e) => handleUsernameChange(e)}></input>
         

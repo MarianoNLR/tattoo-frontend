@@ -18,7 +18,7 @@ export default function Home () {
   return (
     <>
       <Header />
-      <main>
+      <main className="home-main">
         <div className='SideBar'>
         <SideBar setCategory={setCategory}/>
         </div>
